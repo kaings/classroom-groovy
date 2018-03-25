@@ -22,6 +22,7 @@ List weekend = days.findAll { it.startsWith("S") }
 println days
 println weekend
 
+
 // collect
 List nums = [1,2,2,7,2,8,2,4,6]
 
@@ -59,6 +60,16 @@ def people = [
     new Person(name:"Mary", age:35),
     new Person(name:"Andrew", age:25)
 ]
+
+people.each { person ->
+    println person.name
+}
+
+people.eachWithIndex { person, key ->
+    println person.name + ' && ' + key
+    
+}
+
 
 assert people
     .findAll { it.age < 40 }
